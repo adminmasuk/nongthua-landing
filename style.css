@@ -145,6 +145,21 @@ a:focus-visible, button:focus-visible {
   padding: 48px 0 64px;
 }
 .mascot-glow--gold { background: radial-gradient(circle, #fff3a0 0%, #c8e64a 20%, #5fae2a 40%, rgba(26, 92, 40, 0) 68%); }
+/* Hero background image (Emerald Growth Waves & Charts) — dark side under the headline, chart behind the mascot */
+.hero {
+  background:
+    linear-gradient(90deg, rgba(2, 38, 5, .55) 0%, rgba(2, 38, 5, 0) 55%),
+    url("assets/hero-bg.webp") right center / cover no-repeat,
+    #0b4410;
+}
+@media (max-width: 959px) {
+  .hero {
+    background:
+      linear-gradient(180deg, rgba(2, 38, 5, .96) 0%, rgba(2, 38, 5, .82) 46%, rgba(2, 38, 5, 0) 80%),
+      url("assets/hero-bg-mobile.webp") 72% bottom / cover no-repeat,
+      #0b4410;
+  }
+}
 .hero-grid { position: relative; display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
 .hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
 .hero-title { line-height: 1.4; color: var(--white); }
@@ -391,7 +406,7 @@ a:focus-visible, button:focus-visible {
 .qr-box > span { font-size: 14px; font-weight: 800; color: var(--brand-950); }
 .mascot-img--cutout {
   -webkit-mask-image: none; mask-image: none;
-  width: min(500px, 92%);
+  width: min(580px, 100%);
   filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .35));
 }
 .final-mascot { position: relative; flex: 0 1 300px; display: flex; justify-content: center; }

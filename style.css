@@ -147,7 +147,7 @@ a:focus-visible, button:focus-visible {
 .hero-decor { position: absolute; left: 0; bottom: 0; width: 60%; height: 55%; pointer-events: none; }
 .hero-grid { position: relative; display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
 .hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
-.hero-title { line-height: 1.15; color: var(--white); }
+.hero-title { line-height: 1.4; color: var(--white); }
 .hero-title span { display: block; font-size: clamp(38px, 6vw, 64px); }
 .hero-title .hero-title-big { font-size: clamp(46px, 7.6vw, 84px); color: var(--yellow); }
 .quote-box {

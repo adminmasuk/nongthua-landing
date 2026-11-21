@@ -438,12 +438,12 @@ a:focus-visible, button:focus-visible {
 .hero .mascot-img--cutout { width: min(100%, 560px); }
 @media (min-width: 960px) {
   .hero-grid { grid-template-columns: minmax(540px, .9fr) 1.1fr; gap: 8px; }
-  .hero .mascot-stage { margin-right: -8vw; }
-  .hero .mascot-img--cutout { width: calc(100% + 4vw); max-width: 980px; }
+  .hero .mascot-stage { margin-right: 0; }
+  .hero .mascot-img--cutout { width: min(100%, 540px); max-width: none; }
 }
 @media (max-width: 959px) {
-  .hero .mascot-stage { margin: 0 -20px; }
-  .hero .mascot-img--cutout { width: 100vw; max-width: 640px; }
+  .hero .mascot-stage { margin: 0; }
+  .hero .mascot-img--cutout { width: 70vw; max-width: 448px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

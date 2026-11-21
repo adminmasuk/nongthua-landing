@@ -434,6 +434,17 @@ a:focus-visible, button:focus-visible {
   .tab-panel { grid-template-columns: .9fr 1.1fr; gap: 64px; }
   .faq-grid { grid-template-columns: 320px 1fr; }
 }
+/* Hero mascot — enlarged (2026-11-21): fills more of the hero, bleeds slightly past the column on desktop */
+.hero .mascot-img--cutout { width: min(100%, 560px); }
+@media (min-width: 960px) {
+  .hero-grid { grid-template-columns: minmax(540px, .9fr) 1.1fr; gap: 8px; }
+  .hero .mascot-stage { margin-right: -8vw; }
+  .hero .mascot-img--cutout { width: calc(100% + 4vw); max-width: 980px; }
+}
+@media (max-width: 959px) {
+  .hero .mascot-stage { margin: 0 -20px; }
+  .hero .mascot-img--cutout { width: 100vw; max-width: 640px; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; }

@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800;1,900&display=swap">
-  <link rel="stylesheet" href="style.css?v=20261121b">
+  <link rel="stylesheet" href="style.css?v=20261121c">
 </head>
 <!-- ตั้งค่า: เปลี่ยน data-pro-open เป็น "true" เมื่อเปิดรับสมัคร Pro (ตรงกับ PRO_OPEN=true บน Render) -->
 <body data-pro-open="false">
@@ -37,9 +37,38 @@
 
     <!-- ===== Hero ===== -->
     <section class="hero on-dark" id="top">
-      <svg class="hero-decor" viewBox="0 0 600 300" preserveAspectRatio="none" aria-hidden="true">
-        <g fill="#1f5a2a"><rect x="40" y="200" width="14" height="60" rx="3"/><rect x="80" y="170" width="14" height="80" rx="3"/><rect x="120" y="185" width="14" height="50" rx="3"/><rect x="160" y="140" width="14" height="90" rx="3"/><rect x="200" y="155" width="14" height="60" rx="3"/><rect x="240" y="110" width="14" height="95" rx="3"/><rect x="280" y="120" width="14" height="70" rx="3"/><rect x="320" y="80" width="14" height="100" rx="3"/></g>
-        <polyline points="0,280 90,250 170,262 250,200 330,215 420,150 500,165 600,90" fill="none" stroke="#1f5a2a" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+      <!-- ฉากหลัง Hero: ลูกศรทองโค้งพุ่งขึ้น + กราฟแท่งเขียว (เข้าชุดกับมาสคอต) -->
+      <svg class="hero-bg" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="hb-bar" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2a7a36"/>
+            <stop offset="1" stop-color="#16471f"/>
+          </linearGradient>
+          <linearGradient id="hb-arrow" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="#ffd23f" stop-opacity="0"/>
+            <stop offset=".45" stop-color="#ffd23f" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#ffd23f" stop-opacity=".34"/>
+          </linearGradient>
+        </defs>
+        <g stroke="#ffffff" stroke-opacity=".05" stroke-width="1">
+          <line x1="0" y1="175" x2="1440" y2="175"/><line x1="0" y1="350" x2="1440" y2="350"/><line x1="0" y1="525" x2="1440" y2="525"/>
+        </g>
+        <g fill="url(#hb-bar)" opacity=".85">
+          <rect x="40" y="640" width="46" height="60" rx="8"/>
+          <rect x="120" y="620" width="46" height="80" rx="8"/>
+          <rect x="200" y="630" width="46" height="70" rx="8"/>
+          <rect x="280" y="600" width="46" height="100" rx="8"/>
+          <rect x="360" y="610" width="46" height="90" rx="8"/>
+          <rect x="440" y="575" width="46" height="125" rx="8"/>
+          <rect x="520" y="585" width="46" height="115" rx="8"/>
+          <rect x="600" y="545" width="46" height="155" rx="8"/>
+          <rect x="1120" y="470" width="56" height="230" rx="10"/>
+          <rect x="1210" y="410" width="56" height="290" rx="10"/>
+          <rect x="1300" y="330" width="56" height="370" rx="10"/>
+          <rect x="1390" y="260" width="56" height="440" rx="10"/>
+        </g>
+        <path d="M -20 690 C 360 650, 720 570, 1000 400 S 1270 200, 1345 150" fill="none" stroke="url(#hb-arrow)" stroke-width="34" stroke-linecap="round"/>
+        <path d="M 1290 132 L 1392 112 L 1370 214 Z" fill="#ffd23f" fill-opacity=".34" stroke="#ffd23f" stroke-opacity=".34" stroke-width="10" stroke-linejoin="round"/>
       </svg>
 
       <div class="container hero-grid">
@@ -62,7 +91,22 @@
         </div>
 
         <div class="mascot-stage">
-          <div class="mascot-glow" aria-hidden="true"></div>
+          <div class="mascot-glow mascot-glow--gold" aria-hidden="true"></div>
+          <svg class="mascot-sparkles" viewBox="0 0 500 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="ms-coin" cx=".35" cy=".3" r=".75">
+                <stop offset="0" stop-color="#fff3a6"/><stop offset=".55" stop-color="#ffc928"/><stop offset="1" stop-color="#d99a00"/>
+              </radialGradient>
+            </defs>
+            <g class="float float--a"><circle cx="70" cy="110" r="24" fill="url(#ms-coin)" stroke="#b07c00" stroke-width="3"/><circle cx="70" cy="110" r="15" fill="none" stroke="#b07c00" stroke-width="2.5" stroke-opacity=".6"/></g>
+            <g class="float float--b"><circle cx="455" cy="150" r="17" fill="url(#ms-coin)" stroke="#b07c00" stroke-width="3"/><circle cx="455" cy="150" r="10" fill="none" stroke="#b07c00" stroke-width="2" stroke-opacity=".6"/></g>
+            <g class="float float--c"><circle cx="40" cy="330" r="14" fill="url(#ms-coin)" stroke="#b07c00" stroke-width="2.5"/></g>
+            <g fill="#fff3a6">
+              <path class="twinkle twinkle--a" d="M120 40 l6 16 16 6 -16 6 -6 16 -6 -16 -16 -6 16 -6z"/>
+              <path class="twinkle twinkle--b" d="M410 60 l4 11 11 4 -11 4 -4 11 -4 -11 -11 -4 11 -4z"/>
+              <path class="twinkle twinkle--c" d="M478 300 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/>
+            </g>
+          </svg>
           <img class="mascot-img mascot-img--cutout" src="assets/hero-mascot-v2.webp" width="1040" height="991" alt="มาสคอตน้องถั่วใส่สูท ชูนิ้วโป้งและถือเหรียญ ยืนบนกองเหรียญข้างกราฟพุ่งขึ้น" fetchpriority="high">
         </div>
       </div>

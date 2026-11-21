@@ -144,18 +144,7 @@ a:focus-visible, button:focus-visible {
   background: linear-gradient(115deg, var(--night) 0%, var(--forest) 45%, var(--brand-900) 100%);
   padding: 48px 0 64px;
 }
-.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .mascot-glow--gold { background: radial-gradient(circle, #fff3a0 0%, #c8e64a 20%, #5fae2a 40%, rgba(26, 92, 40, 0) 68%); }
-.mascot-sparkles { position: absolute; width: min(540px, 100%); height: auto; aspect-ratio: 500 / 480; pointer-events: none; z-index: 1; }
-.mascot-stage .mascot-img--cutout { z-index: 2; }
-.float { animation: float 4.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-.float--b { animation-delay: -1.5s; animation-duration: 5.2s; }
-.float--c { animation-delay: -3s; animation-duration: 3.8s; }
-.twinkle { animation: twinkle 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-.twinkle--b { animation-delay: -.9s; }
-.twinkle--c { animation-delay: -1.7s; }
-@keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-10px) rotate(-6deg); } }
-@keyframes twinkle { 0%, 100% { opacity: .25; transform: scale(.7); } 50% { opacity: 1; transform: scale(1); } }
 .hero-grid { position: relative; display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
 .hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
 .hero-title { line-height: 1.4; color: var(--white); }
@@ -433,6 +422,5 @@ a:focus-visible, button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; }
-  .float, .twinkle { animation: none !important; }
 }
 .richmenu-img { width: 100%; height: auto; border-radius: var(--r-card); }
